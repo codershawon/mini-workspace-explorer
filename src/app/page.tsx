@@ -1,4 +1,5 @@
 import { AppShell } from "@/components/AppShell";
+import { UnsavedChangesDialog } from "@/components/editor/UnsavedChangesDialog";
 import { MainPanel } from "@/components/main/MainPanel";
 import { Sidebar } from "@/components/sidebar/Sidebar";
 import { WorkspaceProvider } from "@/context/WorkspaceContext";
@@ -12,6 +13,7 @@ export default function Home() {
       >
         <MainPanel />
       </AppShell>
-    </WorkspaceProvider>
+    <UnsavedChangesDialog/>
+</WorkspaceProvider>
   );
 }
