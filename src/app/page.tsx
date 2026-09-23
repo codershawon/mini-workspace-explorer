@@ -1,4 +1,5 @@
 import { AppShell } from "@/components/AppShell";
+import { MainPanel } from "@/components/main/MainPanel";
 import { Sidebar } from "@/components/sidebar/Sidebar";
 import { WorkspaceProvider } from "@/context/WorkspaceContext";
 
@@ -9,7 +10,7 @@ export default function Home() {
         sidebar={<Sidebar />}
         search={<div className="h-8 rounded border border-gray-200 bg-gray-50" />}
       >
-        <p className="p-6 text-sm text-gray-500">Main panel goes here</p>
+        <MainPanel />
       </AppShell>
     </WorkspaceProvider>
   );
