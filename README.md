@@ -155,6 +155,4 @@ src/
 
 ## Use of AI
 
-<!-- Edit this section so it matches exactly what you did. -->
-
 I used an AI assistant (Claude) to review the finished project against the requirements and to help write this README and my own notes about the project.
