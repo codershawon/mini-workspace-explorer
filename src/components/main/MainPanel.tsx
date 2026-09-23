@@ -3,6 +3,7 @@
 import { useWorkspace } from "@/context/WorkspaceContext";
 import { Breadcrumb } from "./Breadcrumb";
 import { FolderView } from "./FolderView";
+import { FileEditor } from "@/components/editor/FileEditor";
 
 export function MainPanel() {
   const { state } = useWorkspace();
@@ -17,11 +18,7 @@ export function MainPanel() {
       </div>
 
       <div className="min-h-0 flex-1 overflow-y-auto">
-        {state.openFileId ? (
-          <p className="p-6 text-sm text-gray-500">Editor goes here</p>
-        ) : (
-          <FolderView />
-        )}
+        {state.openFileId ? <FileEditor key={state.openFileId} /> : <FolderView />}
       </div>
     </div>
   );
