@@ -5,6 +5,11 @@ body {
   height: 100%;
 }
 
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains-mono), ui-monospace, monospace;
+}
+
 body {
   @apply bg-white text-gray-800 antialiased;
 }

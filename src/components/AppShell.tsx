@@ -6,11 +6,12 @@ import { useWorkspace } from "@/context/WorkspaceContext";
 
 interface AppShellProps {
   sidebar: ReactNode;
+  sidebarFooter?: ReactNode;
   search: ReactNode;
   children: ReactNode;
 }
 
-export function AppShell({ sidebar, search, children }: AppShellProps) {
+export function AppShell({ sidebar, sidebarFooter, search, children }: AppShellProps) {
   const { state } = useWorkspace();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
@@ -86,6 +87,8 @@ export function AppShell({ sidebar, search, children }: AppShellProps) {
           </div>
 
           <div className="min-h-0 flex-1 overflow-y-auto pb-4">{sidebar}</div>
+
+          {sidebarFooter}
         </aside>
 
         {/* main area */}
